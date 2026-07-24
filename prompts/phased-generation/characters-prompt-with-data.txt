@@ -101,7 +101,7 @@ Generate a JSON object with the following fields:
 
 ### 2. **character_arcs** (array)
 
-Each character from the provided data MUST have an arc entry, **including the player persona if one is provided**. Use exact character names.
+Each character from the provided data MUST have an arc entry. If a player persona is provided in the PERSONA DATA section, include an arc for them as well. Use exact character names.
 
 ```json
 {
@@ -122,7 +122,7 @@ Each character from the provided data MUST have an arc entry, **including the pl
 ```
 
 **Guidelines for character_arcs:**
-- Create an arc for EACH character in the provided data AND the player persona (if provided in PERSONA DATA section).
+- Create an arc for EACH character in the provided data. If a player persona is provided in the PERSONA DATA section, include an arc for them as well.
 - Initial states should reflect the character's provided description and personality.
 - Turning points should be specific scenes or events that create meaningful change.
 - Final states should be achievable through different player choices (not a single fixed outcome).

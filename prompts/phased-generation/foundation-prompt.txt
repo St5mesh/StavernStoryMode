@@ -4,6 +4,8 @@ This is Phase 1 of 5 in a phased blueprint generation process. You are responsib
 
 **CRITICAL:** Generate your response immediately and directly. Do not engage in verbose internal reasoning or deliberation - you are an expert who can design story foundations efficiently. Proceed directly to producing valid JSON.
 
+**IMPORTANT — PERSONA IS OPTIONAL:** A player persona may or may not be present. If no persona is listed in PERSONA DATA, proceed using the CHARACTER DATA, story type, and USER SCENARIO. Never refuse or delay because a persona is absent.
+
 ## STORY TYPE
 
 The story type defines the genre, framework, and conventions for this narrative.

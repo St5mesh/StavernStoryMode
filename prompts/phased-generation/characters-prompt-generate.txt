@@ -8,6 +8,8 @@ This is Phase 2 of 5 in a phased blueprint generation process. You will design c
 
 **No specific character data has been provided.** You must CREATE 2-4 original characters that fit within this story. Design characters who are memorable, emotionally complex, and suited to the genre/tone.
 
+**Player persona is OPTIONAL.** If a persona is provided in the PERSONA DATA section below, incorporate it as a character. If no persona is provided, proceed by creating appropriate characters from the story setup and genre alone — do NOT wait for or require a persona to proceed.
+
 ## STORY TYPE
 
 **Story Type:** {{STORY_TYPE_NAME}}
@@ -67,7 +69,7 @@ Generate a JSON object with the following fields:
 
 ### 2. **character_arcs** (array)
 
-Create 2-4 compelling characters. **If a player persona is provided above, you MUST include that persona as one of the characters with a full arc.** Each character must have:
+Create 2-4 compelling characters. If a player persona is provided above, include that persona as one of the characters with a full arc. Each character must have:
 
 ```json
 {
