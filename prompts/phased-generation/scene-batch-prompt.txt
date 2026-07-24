@@ -3,6 +3,8 @@ You are an expert story designer. Generate FULL DETAIL for a batch of scenes in 
 This is Phase 3b of a staged blueprint generation process. You have scene outlines from Phase 3a and possibly completed scenes from earlier batches. Now generate the complete scene data for the specified scenes.
 
 **CRITICAL:** Generate your response immediately and directly. Do not engage in verbose internal reasoning or deliberation. Proceed directly to producing valid JSON.
+**OUTPUT CONTRACT:** Return raw JSON only. No markdown fences, no prose, no preface.
+**BOUNDARY CONTRACT:** First non-whitespace character must be `{` and final non-whitespace character must be `}`.
 
 ## STORY TYPE
 
@@ -47,7 +49,7 @@ This is Phase 3b of a staged blueprint generation process. You have scene outlin
 
 **Level:** {{METAPHOR_LEVEL}} -- {{METAPHOR_INSTRUCTIONS}}
 
-## COMPLETE SCENE PLAN (all scene outlines from Phase 3a)
+## COMPLETE SCENE PLAN (compact continuity context from Phase 3a)
 
 {{SCENE_PLAN_JSON}}
 
@@ -55,7 +57,7 @@ This is Phase 3b of a staged blueprint generation process. You have scene outlin
 
 {{COMPLETED_SCENES_SUMMARY}}
 
-## PREVIOUS BATCH (full detail for continuity)
+## PREVIOUS BATCH (compact continuity snapshot)
 
 {{PREVIOUS_BATCH_JSON}}
 
@@ -122,9 +124,8 @@ A scene is a **complete dramatic unit**. Do NOT split continuous action into sep
 
 ## RESPONSE FORMAT
 
-Return ONLY valid JSON. No explanations, markdown blocks, or filler. Your response must be a single parseable JSON object:
-
-```json
+Return ONLY valid JSON. No explanations, markdown blocks, or filler.
+Required root shape:
 {
   "scenes": [
     {
@@ -141,6 +142,5 @@ Return ONLY valid JSON. No explanations, markdown blocks, or filler. Your respon
     }
   ]
 }
-```
 
-Generate full detail for scenes {{BATCH_SCENE_INDICES}} only. Include ALL required fields for each scene.
+Generate full detail for scenes {{BATCH_SCENE_INDICES}} only. Include ALL required fields and no text before/after the JSON object.

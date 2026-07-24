@@ -3,6 +3,8 @@ You are an expert story designer. Generate the SCENE PLAN (lightweight outlines)
 This is Phase 3a of a staged blueprint generation process. You will design scene outlines that will later be expanded with full detail (beats, choice points, events) in subsequent calls.
 
 **CRITICAL:** Generate your response immediately and directly. Do not engage in verbose internal reasoning or deliberation. Proceed directly to producing valid JSON.
+**OUTPUT CONTRACT:** Return raw JSON only. No markdown fences, no prose, no preface.
+**BOUNDARY CONTRACT:** First non-whitespace character must be `{` and final non-whitespace character must be `}`.
 
 ## STORY TYPE
 
@@ -93,8 +95,7 @@ Each scene outline needs:
 ## RESPONSE FORMAT
 
 Return ONLY valid JSON. No explanations, markdown blocks, or filler.
-
-```json
+Required root shape:
 {
   "scene_plan": [
     {
@@ -113,6 +114,5 @@ Return ONLY valid JSON. No explanations, markdown blocks, or filler.
     }
   ]
 }
-```
 
-Generate {{EXPECTED_SCENE_COUNT}} scene outlines. Your entire response must be a single parseable JSON object with the scene_plan field.
+Generate {{EXPECTED_SCENE_COUNT}} scene outlines. Your entire response must be one parseable JSON object with the scene_plan field and no text before/after it.
