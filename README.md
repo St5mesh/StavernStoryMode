@@ -114,12 +114,11 @@ See [CHANGELOG.md](./CHANGELOG.md) for detailed release notes.
 
 ---
 
-## Planned Features (v2)
+## Advanced Features (v2 - Implemented)
 
-### Advanced Features
-- **World Lore Integration**: Better incorporation of world-building details and lore entries into scenario generation
-- **World State Tracking**: Track and maintain evolving world states, locations, and ongoing events across scenes and story arcs
-- **Lorebook Geneation**: Auto-generate lorebook entries from scene summaries and beat completions
+- **World Lore Integration**: Runtime scene prompts now pull relevant embedded lore entries (plus linked lorebook references) using scene title, purpose, phase, location, and character focus matching.
+- **World State Tracking**: Scenario runs now track continuity state (location, phase, recent events, beat completions, character last-seen metadata) and inject this state into prompts.
+- **Lorebook Generation**: Optional automatic lorebook entry generation from scene summaries and beat completions now stores reusable entries directly in the active blueprint lorebook.
 
 ---
 
